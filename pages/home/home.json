@@ -1,0 +1,11 @@
+{
+  "usingComponents": { 
+    "tabBottom": "/components/tabBar/tabBar"
+  },
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "",
+  "backgroundColor": "#000",
+  "backgroundTextStyle": "light",
+  "navigationStyle": "custom"
+}

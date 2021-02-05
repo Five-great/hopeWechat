@@ -1,0 +1,43 @@
+<!--pages/responsiblityDeiler/responsiblityDeiler.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}">
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '社会责任' , imgUrl: '../../image/responsibility/responsibilityTopBg.png'}}"/>
+  <!-- 详情文章 -->
+   <view class="detailBox">
+      <view class="detailTitle" ><text> {{Detail.Title}}哈斯的话就卡刷等级达到杀菌和大家啥的吉萨的环境啥的撒旦交换就撒谎的就撒大家哈时间的话几哈设计的哈市几点回家撒娇啊圣诞节撒娇好的家啊哈稍等吉萨大姐</text></view>
+      <view class="detailTime"><text> {{Detail.Time}}</text></view>
+      <wxHtml inner-text="{{Detail.Content}}" ></wxHtml>
+   </view>
+	 <!-- 社会担当 -->
+	 <view class="sociology">
+          <view  class="Box" >
+               <view class="topTitle"><i></i></view>
+               <view class="main">
+                  <block wx:for="{{shzrList}}" wx:key="index">
+                   <view class="itemBox {{wx.WOW()}} " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.1}}s" data-wx-wow-offset="100" data-wx-wow-name="fadeInUp"  data-wx-wow-outName="rotateOutDownRight" data-idx="{{item.id}}"  catchtap="{{wx.WOWOut}}"  >
+                        <view class="imgBox {{wx.WOW()}} rotateInDownLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"  data-wx-wow-name="rotateInDownLeft"   data-wx-wow-offset="100" ><image class="itemImg" src="{{item.FengmUrl}}" ></image></view> 
+                         <view class="itemText {{wx.WOW()}} rotateInUpRight" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"  data-wx-wow-name="rotateInUpRight" data-wx-wow-offset="100">
+                           <view class="bot"></view>
+                           <text class="text">{{util.sub(item.Title,22)}}</text>
+                           <text class="time">{{util.formatTime(item.Time,'/')}}</text>
+                           <view class="bottom"><span class="arrow"><i><em></em></i><i><em></em></i><i><em></em></i></span><image class="bottomImg" src="../../image/index/hopeTextRes.png" ></image></view>
+                        </view>
+                   </view>
+                </block>
+               </view>
+          </view>
+    </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom></tabBottom>

@@ -1,0 +1,32 @@
+<!--pages/hopeEducationContent/hopeEducationContent.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '希望教育报' , imgUrl: 'https://xcx.hope55.com/UploadFile/2021/2/3/68f50365-62c3-47b5-baae-d92404cbefe2.png'}}"/>
+   <view class="hopeEducationContent">
+ 
+    <view class="swiperBox" bindlongtap="showBtnFun">
+        <view class="btn_l" wx:if="{{util.oper(showBtn,1) == 1}}" bindtap="toLeft"> </view>
+        <view class="btn_r"  wx:if="{{util.oper(showBtn,2) == 2}}" bindtap="toRight"> </view>
+        <swiper class="imageContainer" bindchange="handleChange"  current="{{currentIndex}}" bindanimationfinish="changeFinish"  >
+          <block wx:for="{{dzbList}}" wx:key="index">
+          <swiper-item class="item">
+            <view class="imgBox"><image class="itemImg " src="{{item.photo}}"></image></view> 
+          </swiper-item>
+          </block>
+        </swiper>
+     </view>
+   </view>
+   
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom></tabBottom>

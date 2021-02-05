@@ -1,0 +1,6 @@
+{
+  "usingComponents": { 
+    "tabBottom": "/components/tabBar/tabBar"
+  },
+  "navigationBarTitleText": "社会责任"
+}

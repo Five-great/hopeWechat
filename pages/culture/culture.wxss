@@ -1,0 +1,60 @@
+/* pages/culture/culture.wxss */
+@import '/template/bannerPage/bannerPage.wxss';
+@import '/template/bottomPage/bottomPage.wxss';
+
+.title {
+   width: 300rpx;
+   height: 100rpx;
+   text-align:center;
+   margin: 0 auto ;
+}
+.title .logoimg{
+   width: 266rpx;
+   height: 18rpx;
+   margin: 8rpx auto ;
+}
+.title  .titleText{
+    display: inline-block;
+    font-size: 36rpx;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    letter-spacing: 2rpx;
+}
+.title .tags{
+   width: 300rpx;
+   text-align:center;
+}
+.title .tags text{
+    display: inline-block;
+    font-size: 18rpx;
+    color: rgb(0, 0, 0);
+    line-height: 1.333;
+}
+.titleRed {
+
+}
+.titleRed .text{
+    font-size: 36rpx;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    line-height: 1.111;
+    display: block;
+    margin:  5rpx 0;
+}
+.titleRed .img{
+  width: 310rpx;
+  height: 19rpx;
+}
+.titleRed .text i{
+      display: inline-block;
+      vertical-align: top;
+      width: 0rpx;
+      height: 0rpx;
+      border: 10rpx solid transparent;
+      border-top-color: #c31300;
+      transform: rotate(135deg) translate(3rpx,10rpx);
+}
+.Box{
+    width: 700rpx;
+    margin: 0 auto;
+}

@@ -1,0 +1,56 @@
+<!--pages/about/about.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" ></view>
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '联系我们' , imgUrl: '../../image/about/aboutTopBg.png'}}"/>
+    <cover-view class="menuBox" id="menuBoxID" wx:if="{{showMenu}}">
+       <cover-view  class="itme active" catchtap="menuGoto" data-url="pages/hope/hope" >集团简介  <cover-view class="i"><cover-view class="em"></cover-view> </cover-view> </cover-view>
+       <cover-view class="itme" catchtap="menuGoto" data-url="pages/school/school" >集团院校  <cover-view class="i"><cover-view class="em"></cover-view> </cover-view>  </cover-view>
+       <cover-view class="itme" catchtap="menuGoto" data-url="pages/history/history" >发展历程  <cover-view class="i"><cover-view class="em"></cover-view> </cover-view> </cover-view>
+    </cover-view>
+     <view class="article">
+    <!-- 地图 -->
+      <view class="mapBox">
+        <map
+          id="hopeMap"
+          style="width: 100%; height: 445rpx;"
+          latitude="{{latitude}}"
+          longitude="{{longitude}}"
+          bindcallouttap="callouttap"
+          markers="{{markers}}"
+          scale="15"
+          enable-zoom
+          enable-scroll
+        >
+        </map>
+       </view>
+       <!-- textBox -->
+       <view class="textBox">
+          <view class="textItem" catchtap="toCall" ><span class="textTitle">前台号码</span><i>028-69694278＞</i></view>
+          <view class="textItem"  ><span class="textTitle" >传真号码</span><i>028-69694278＞</i></view>
+          <view class="textItem"  ><span class="textTitle" >邮<em></em>编</span><i>028-69694278＞</i></view>
+          <view class="textItem"  ><span class="textTitle" > 地<em></em>址</span><i>四川省成都市高新西区大道2000号＞</i></view>
+       </view>
+       
+         <!-- 二维码 -->
+         <view class="QRcode">
+           <view class="imgBox"  ><image bindlongtap="actionSheetTap" class="imgCode" src="../../image/about/wxImg.png"></image> <text>长按二维码</text><text>关注微信公众号</text></view>
+           <view class="lineBox"> <image class="line" src="../../image/about/line.png" ></image></view>
+           <view class="imgBox"><image class="imgCode" src="../../image/about/wbImg.png"></image> <text>长按二维码</text><text>关注新浪微博</text></view>
+         </view>
+     </view>
+   <template is="bottomPage" />
+<tabBottom activeIdx='5' ></tabBottom>
+ <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for="{{actionSheetItems}}" wx:key="index">
+      <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

@@ -1,0 +1,62 @@
+/**app.wxss**/
+@import "./utils/wow/wxWOW.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.tabBottom{
+  max-height: 0;
+  display:none;
+  overflow: hidden;
+}
+.tabBottom.showTab{
+  max-height: auto;
+  display: block;
+}
+
+.menuBox{
+  display: flex;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9;
+  width: 750rpx;
+  height: 60rpx;
+  background: #c31300;
+  border: 1rpx solid #c72311 ;
+}
+
+.menuBox .itme{
+  flex: 1;
+  display: block;
+  text-align: center;
+  position: relative;
+  line-height: 60rpx;
+  font-size: 30rpx ;
+  color: #fff;
+}
+.menuBox .itme.active .i{
+    display: block;
+    position: absolute;
+    bottom: 2rpx;
+    left: 50%;
+    margin-left: -30rpx;
+    width: 60rpx;
+    height: 6rpx;
+    border-radius: 6rpx;
+    background: #fff;
+}
+.menuBox .itme.active .i .em{
+  display: block;
+  margin: 0 auto;
+  width: 10rpx;
+  height: 6rpx;
+  margin-top: -5rpx;
+  border-radius: 2rpx;
+  background: #fff;
+}

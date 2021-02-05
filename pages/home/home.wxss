@@ -1,0 +1,603 @@
+/* pages/home/home.wxss */
+.pages{
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  font-size:0;
+}
+.welcomePage{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+}
+.welcomePage.showWelcomePage{
+  display: block;
+  margin-top: 0;
+  animation: showWelcomePage .5s ;
+}
+
+@keyframes showWelcomePage {
+  0% {
+    margin-top: -100vh;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes hideWelcomePage {
+  0% {
+    margin-top: 0vh;
+  }
+  100% {
+    margin-top: -100vh;
+  }
+}
+.pages.hidePage .welcomePage{
+  /* display: none; */
+  margin-top: -100vh;
+  animation: hideWelcomePage .6s ;
+}
+.pages.hidePage  .welcomePage.hideWelcomePage{
+  display: none;
+}
+.homePage{
+  width: 100vw;
+  display: block;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+  /* height: 100vh; */
+  padding-top: 100rpx;
+  min-height: 100vh;
+  font-size: 0;
+}
+.pages.hidePage{
+  /* overflow: visible; */
+  height: auto;
+}
+.welcomePage .hopeBg{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+.welcomePage .hopeLogo{
+  width: 101rpx;
+  height: 101rpx;
+  position: absolute;
+  display: block;
+  top: 195rpx;
+  left: 50%;
+  margin-left: -50rpx;
+}
+.welcomePage  .hopeTitleZN{
+  width: 261rpx;
+  height: 39rpx;
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: -130rpx;
+  top: 310rpx;
+  z-index: 3;
+}
+.welcomePage  .hopeTitleEN{
+  width: 260rpx;
+  height: 14rpx;
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: -130rpx;
+  top: 360rpx;
+  z-index: 3;
+}
+.welcomePage .roundBox{
+  position: absolute;
+  top:0;
+  left: 0rpx;
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 0;
+}
+.welcomePage  .round{
+  position: relative;
+  display: block;
+  left:50%;
+  top: 100%;
+  margin-left: -754rpx;
+  margin-top: -1210rpx;
+  width: 1509rpx;
+  height: 1509rpx;
+}
+.welcomePage .tags{
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  justify-items: center;
+  bottom:40rpx;
+  height: 30rpx;
+  width: 100vw;
+}
+.welcomePage .btn{
+  display: block;
+  position: absolute;
+  z-index: 6;
+  width: 79rpx;
+  height: 79rpx;
+  bottom: 440rpx;
+  left: 50%;
+  margin-left: -40rpx;
+}
+.welcomePage .btn-bot{
+  display: block;
+  width: 4rpx;
+  height: 4rpx;
+  border-radius: 2rpx;
+  background: #fff;
+  margin: 10rpx auto;
+}
+.welcomePage .btn-bot.bot2{
+  bottom: 410rpx;
+}
+.welcomePage .btn-bot.bot3{
+  bottom: 395rpx;
+}
+.welcomePage .botBox{
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 80rpx;
+  height:100rpx;
+  bottom: 325rpx;
+  left: 50%;
+  z-index: 6;
+  opacity: 1!important;
+  filter: opacity=100!important;
+  margin-left: -40rpx;
+}
+.welcomePage .btn-bot.bot4{
+  bottom: 380rpx;
+}
+.welcomePage .btn-bot.bot5{
+  bottom: 365rpx;
+}
+.welcomePage .btn-bot.bot6{
+  bottom: 350rpx;
+}
+.welcomePage .tags .tag{
+  display: inline-block;
+  flex: 1;
+  font-size: 24rpx;
+  font-family: "Microsoft YaHei";
+  line-height: 1.636;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.welcomePage .tags .tag i{display: inline-block;width: 50rpx; height: 24rpx;}
+.welcomePage .tags .tag.black{
+  color: rgb(0, 0, 0);
+}
+
+
+.hometext{
+  display: block;
+  font-size:30rpx;
+  height: 800px;
+  color: red;
+}
+
+.homeLogo{
+  width: 367rpx;
+  height: 38rpx;
+  display: block;
+  margin: 0 auto ;
+}
+
+.imageContainer{
+  width: 100%;
+  height: 500rpx;
+ }
+ .imageContainer .item{
+  height: 410rpx;
+  /* padding: 40rpx 0; */
+  overflow: hidden;
+ }
+ .imageContainer .item .imgBox{
+   /* margin: 0 auto; */
+   /* display: block; */
+   position: absolute;
+   width: 650rpx;
+   left: 10rpx;
+   height: 400rpx;
+   z-index: 5;
+   opacity: 0.7;
+   border-radius: 15rpx;
+   
+   overflow: hidden;
+   top: 13%;
+ }
+ .imageContainer .itemImg{
+   position: relative;
+   width: 100%;
+   height: 100%;
+
+ }
+ .imageContainer  .item .imgBox.active{
+  opacity: 1;
+  z-index: 10;
+  height: 430rpx;
+  top: 7%;
+  box-shadow: 0rpx 0rpx 8rpx 0rpx rgba(150, 150, 150, 0.7);
+  transition: all .3s;
+ }
+
+ .swiper-group{
+  position: relative;
+  top:  -15rpx;
+  width: 100vw;
+  height: 15rpx;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+}
+.swiper-group .point.active{
+  background-color: #c31300;
+  width: 80rpx;
+  border-radius:8rpx;
+
+}
+.swiper-group .point{
+  transition: all 0.5s;
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #d2d2d2;
+  margin: 0 5rpx;
+}
+/* 菜单 */
+.menu{
+    display: block;
+    position: relative;
+    width: 725rpx;
+    padding: 30rpx 25rpx;
+    padding-right:0;
+    margin: 0 auto;
+    font-size:0;
+    border-radius: 20rpx;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5rpx 8rpx 0 rgba(0, 0, 0, 0.3);
+}
+.menu .outBox{
+  width: 220rpx;
+  height: 120rpx;
+  position: relative;
+  display: inline-block;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.menu .Box{ 
+  width: 220rpx;
+  height: 120rpx;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10rpx;
+  box-shadow: 0 0 2rpx 0 rgba(100, 100, 100, 0.5);
+}
+.menu .Box .itemBgImg{
+   position: absolute;
+   z-index: 0;
+   width: 220rpx;
+   height: 120rpx;
+}
+
+.menu .Box .itemIconImg{
+  position: absolute;
+  z-index: 1;
+  display: block;
+  min-width: 36rpx;
+  width: auto;
+  height: 35rpx;
+  top: 20rpx;
+  left: 18rpx;
+}
+
+.menu .Box .itemHopeText{
+  position: absolute;
+  width: 117rpx;
+  height: 7rpx;
+  bottom: 45rpx;
+  left: 18rpx;
+  z-index: 1;
+}
+.menu .Box  .itemText{
+  display: block;
+  position: absolute;
+  left: 18rpx;
+  bottom: 20rpx;
+  font-size: 18rpx;
+  letter-spacing: 2rpx;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.2;
+}
+/* 社会担当 */
+.sociology{
+  position: relative;
+  width: 750rpx;
+  margin-top: 40rpx;
+  height: auto;
+  min-height: 790rpx;
+}
+
+.sociology .Bg{
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top:0;
+  right: 0;
+  width:443rpx;
+  height:443rpx;
+}
+
+.sociology .Box{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  min-height:300rpx ;
+  z-index: 0;
+}
+
+.sociology .topTitle{
+  display: block;
+  width:  680rpx;
+   margin-top: 40rpx;
+  margin-left: 27rpx ;
+  height: 100rpx;
+   border-top: 2rpx dotted #c8c8c8;
+   border-right: 2rpx dotted #c8c8c8;
+}
+
+.sociology .topText{
+    font-size: 36rpx;
+    display: block;
+    position: relative;
+    width: 247rpx;
+    background: #fff;
+    margin-top: -15rpx;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    line-height: 1.2;
+}
+.sociology .topText i{
+  border: 15rpx solid transparent ;
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -8rpx;
+  right: -13rpx;
+  transform: rotate(-45deg) ;
+  border-left-color: #c31300;
+}
+
+.sociology .tophopeText{
+  display: block;
+  margin-top: 5rpx;
+  width: 310rpx;
+  height: 19rpx;
+}
+
+.sociology .main{
+
+}
+.sociology .main .itemBox{
+  width: 470rpx;
+  padding-left: 230rpx;
+  padding-top:30rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  position: relative;
+}
+.sociology .main .itemBox .imgBox{
+  height: 205rpx;
+  width: 330rpx;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.sociology .main .itemBox .itemImg{
+  height: 205rpx;
+  width: 330rpx;
+  display: block;
+  
+}
+.sociology .main .itemBox .itemText{
+  width: 285rpx;
+  padding:30rpx 65rpx 0 120rpx;
+  height: 190rpx;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  z-index: 0;
+  border-radius: 6rpx;
+  box-shadow: 0 0rpx 5rpx 0 rgba(0, 0, 0, 0.3);
+}
+
+.sociology .main .itemBox .text{
+    font-size: 22rpx;
+    text-align: justify;
+    display: block;
+    color: rgb(0, 0, 0);
+    line-height: 1.636;
+    min-height: 120rpx;
+}
+
+.sociology .main .itemBox .time{
+    display: block;
+    text-align: right ;
+    font-size: 16rpx;
+    color: rgb(200, 200, 200);
+    line-height: 1.2;
+}
+
+.sociology .main .itemBox .bottom{
+   display: block;
+   width: 390rpx;
+   padding-left: 80rpx;
+   height: 18rpx;
+   padding-top: 1rpx;
+   top: 20rpx;
+   left: -120rpx;
+   position: relative;
+   background: #f5f5f5;
+
+}
+.sociology .main .itemBox::after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 21rpx;
+  top: -48rpx;
+  width: 0;
+  height: 108rpx;
+  border-left: 2rpx dotted #c8c8c8 ;
+
+}
+.sociology .main .itemBox .bot{
+    position: absolute;
+    display: block;
+    top: 12rpx;
+    right: 12rpx;
+    width: 16rpx;
+    height: 16rpx;
+    border: 2rpx solid #c8c8c8;
+    border-radius: 20rpx;
+}
+.sociology .main .itemBox .bottom .bottomImg{
+  display: inline-block;
+  position: relative;
+  top: -10rpx;
+  width: 374rpx;
+  height: 17rpx;
+}
+.sociology .main .itemBox .bottom .arrow{
+  position: relative;
+  vertical-align: top;
+  top: 3rpx;
+  left: -48rpx;
+  display: inline-block;
+}
+.sociology .main .itemBox .bottom .arrow i{
+  position: relative;
+  z-index: 1;
+  width: 0rpx;
+  height: 0rpx;
+  margin-left: -4rpx;
+  display: inline-block;
+  border: 5rpx solid transparent;
+  border-width: 5rpx 6rpx 5rpx 6rpx;
+  border-left-color: #c31300;
+}
+.sociology .main .itemBox .bottom .arrow i em{
+  position: absolute;
+  top: -8rpx;
+  left: -8rpx;
+  display: block;
+  border: 5rpx solid transparent;
+  border-width: 8rpx 4rpx 8rpx 4rpx;
+  border-left-color: #f5f5f5;
+}
+
+/* 希望之门 */
+.gotoWelcome{
+  width: 750rpx;
+  height: 52rpx;
+  background: #c31300;
+  border-radius:50rpx 50rpx 0 0;
+  text-align: center;
+  padding-top:25rpx;
+}
+.gotoWelcome .text{
+    letter-spacing: 2rpx;
+    font-size: 18rpx;
+    color: rgb(255, 255, 255);
+}
+
+.gotoWelcome .icon{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5rpx;
+    margin-right: 10rpx;
+    width: 16rpx;
+    height: 13rpx;
+}
+
+.bottomList .outBox{
+   margin-top: 50rpx ;
+   position: relative;
+   height: 140rpx;
+}
+.bottomList .itemBgImg {
+  width: 484rpx;
+  height: 140rpx;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.bottomList .Box{
+  width: 280rpx;
+  padding-top: 25rpx;
+  padding-left: 205rpx;
+  height: 93rpx;
+  background: #fff;
+  position: relative;
+  top: 13rpx;
+  left: 300rpx;
+  border-radius: 50rpx;
+  box-shadow: 0px 0px 5rpx 0px rgba(0, 0, 0, 0.3);
+}
+
+.bottomList .itemText{
+    font-size: 22rpx;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    line-height: 1.818;
+}
+.bottomList .itemText i{
+  border: 7rpx solid transparent ;
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 2rpx;
+  right: -25rpx;
+  transform: rotate(-45deg) ;
+  border-left-color: #c31300;
+}
+
+.bottomList .itemHopeText{
+  display: block;
+  width: 237rpx;
+  margin-top: 2rpx;
+  height: 13rpx;
+  position: relative;
+}

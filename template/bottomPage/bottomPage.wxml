@@ -1,0 +1,7 @@
+<template name="bottomPage">
+  <view class="bottom">
+      <!-- <image class="bg" src=""></image> -->
+      <image class="bottomRed" src="../../image/responsibility/bottomRed.png" ></image>
+  </view>
+</template>
+

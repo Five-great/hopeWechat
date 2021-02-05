@@ -1,0 +1,46 @@
+<!--pages/culture/culture.wxml-->
+
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '企业文化' , imgUrl: 'https://xcx.hope55.com/UploadFile/2021/2/4/b4360593-4d0a-4b08-a729-4b455a0f1c33.png'}}"/>
+   
+     <view class="Box">
+        <!-- 感恩 -->
+       <view class="show1">
+            <view class="title">
+            <text class="titleText {{wx.WOW()}} backInRight" data-wx-wow-id="{{wx.WOWId()}}" >企业精神</text>
+            <image class="logoimg {{wx.WOW()}} backInLeft" data-wx-wow-id="{{wx.WOWId()}}"  src="https://xcx.hope55.com/UploadFile/2021/2/4/3fa4d738-fa2c-4865-b81f-89d6adcc9d00.png" > </image>
+            <view class="tags">
+               <text class="{{wx.WOW()}} fadeInUp" data-wx-wow-id="{{wx.WOWId()}}"  >感恩、</text>
+               <text class="{{wx.WOW()}} fadeInUp" data-wx-wow-id="{{wx.WOWId()}}"  data-wx-wow-delay="0.2s" >阳光、</text>
+               <text  class="{{wx.WOW()}} fadeInUp" data-wx-wow-id="{{wx.WOWId()}}"  data-wx-wow-delay="0.3s" >严谨、</text>
+               <text  class="{{wx.WOW()}} fadeInUp" data-wx-wow-id="{{wx.WOWId()}}"  data-wx-wow-delay="0.4s" >责任</text>
+            </view>
+         </view>
+         <view class="main">
+
+         </view>
+         <image class="img" src="https://xcx.hope55.com/UploadFile/2021/2/5/9818aa58-1a86-41bd-836a-6e5011a96b04.jpg"></image>
+       </view>
+     
+    
+       <view class="titleRed">
+         <view class="text"><i></i>感恩</view>
+          <image class="img" src="https://xcx.hope55.com/UploadFile/2021/2/4/42d43a73-5591-42c3-9e78-c4282d15890a.png" ></image>
+       </view>
+
+    </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom></tabBottom>
+

@@ -1,0 +1,97 @@
+<!--pages/home/home.wxml-->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{showPage? '':'hidePage' }}" data-wx-wow-id="{{wx.WOWId()}}" bindtouchend="touchEnd"  bindtouchstart="touchStart" >
+ <!-- 欢迎页  start-->
+  <view  class="welcomePage {{showWelcome}} " id="welcomePageID" animation="{{fv_pageScroll.animation}}">
+    <image class="hopeBg" src="https://xcx.hope55.com/UploadFile/2021/1/26/5e5d31ec-d112-4110-8fb0-ccbe40d34683.png"></image>
+    <image class="hopeLogo  {{wx.WOW()}} bounceInUp" data-wx-wow-id="{{wx.WOWId()}}" src="../../image/index/hopeLogo.png"></image>
+    <image class="hopeTitleZN   {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.2s" src="../../image/index/hopetitleZN.png"></image>
+    <image class="hopeTitleEN   {{wx.WOW()}} bounceInRight" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.3s" src="../../image/index/hopetitleEN.png"></image>
+    <view class="roundBox"><image class="round  {{wx.WOW()}} fadeInBottomLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.3s" src="../../image/index/round.png" ></image></view>
+    <image class="btn {{wx.WOW()}} downEffects "  data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.6s" src="../../image/index/btn.png" catchtap="gotoHomePage" ></image>
+    <view class="botBox {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.6s" >
+      <view class="btn-bot bot1 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.6s"></view>
+      <view class="btn-bot bot2 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.7s"></view>
+      <view class="btn-bot bot3 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.8s"></view>
+      <view class="btn-bot bot4 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.9s"></view>
+      <view class="btn-bot bot5 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="2s"></view>
+      <view class="btn-bot bot6 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="2.1s"></view>
+    </view>
+  <!-- 欢迎页  end-->
+
+    <view class="tags">
+      <view class="{{wx.WOW()}} fadeInUp tag" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.8s" data-wx-wow-offset="0" >感<i></i>恩</view>
+      <view class="{{wx.WOW()}} fadeInUp tag" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1s" data-wx-wow-offset="0" >阳<i></i>光</view>
+      <view class="{{wx.WOW()}} fadeInUp tag black" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.2s" data-wx-wow-offset="0" >严<i></i>谨</view>
+      <view class="{{wx.WOW()}} fadeInUp tag black" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.4s" data-wx-wow-offset="0" >责<i></i>任</view>
+    </view>
+   
+  </view>
+  <!-- 首页 -->
+  <view class="homePage" id="homePageID" >
+    <view><image class="homeLogo {{wx.WOW()}} zoomIn" data-wx-wow-id="{{wx.WOWId()}}" src="../../image/index/homeLogo.png"  > </image></view>
+    <!-- 轮播 -->
+    <swiper class="imageContainer" bindchange="handleChange" previous-margin="40rpx" next-margin="40rpx" circular autoplay >
+      <block wx:for="{{BannerList}}" wx:key="index">
+      <swiper-item class="item">
+         <view class="imgBox {{currentIndex == index ? 'active': ''}}"><image class="itemImg " src="{{item.photo}}"></image></view> 
+      </swiper-item>
+      </block>
+    </swiper>
+    <view class="swiper-group" >
+         <view class="point {{index == currentIndex?' active':''}}" wx:for="{{BannerList}}" wx:key="index"></view>
+    </view>
+    <!-- 菜单导航 -->
+    <view class="menu">
+      <block wx:for="{{menuList}}" wx:key="index">
+        <navigator class="outBox {{wx.WOW()}} fadeInBottomLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1}}s" url="{{item.url}}"  open-type="{{item.type}}" hover-class="navigator-hover">
+          <view class="Box"><image class="itemBgImg "  src="{{item.bgImg}}"></image><image class="itemHopeText {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.2}}s" src="../../image/index/hopeText.png" ></image> <image class="itemIconImg {{wx.WOW()}} zoomIn" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s" src="{{item.iconImg}}"></image> <text class="itemText {{wx.WOW()}} fli" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"   >{{item.name}}</text></view>
+        </navigator>
+       </block>
+    </view>
+    <!-- <view style="height:50rpx" ></view> -->
+  
+    <!-- 社会担当 -->
+    <view class="sociology">
+          <image class="Bg"  src="https://xcx.hope55.com/UploadFile/2021/1/26/84604468-6774-42ec-a7a4-1e9a174abe7a.png"></image>
+          <view  class="Box" >
+               <view class="topTitle">
+                  <view class="topText"><text>勇担社会责任展示企业担当</text><i></i></view>
+                  <!-- <image class="tophopeText" src="../../image/index/hopeTextBig.png"></image> -->
+                  <image class="tophopeText" src="https://xcx.hope55.com/UploadFile/2021/2/4/42d43a73-5591-42c3-9e78-c4282d15890a.png"></image>
+                 
+               </view>
+               <view class="main">
+                <block wx:for="{{shzrList}}" wx:key="index">
+                   <view class="itemBox {{wx.WOW()}} fadeInUp" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.1}}s" data-wx-wow-offset="100">
+                        <view class="imgBox {{wx.WOW()}} rotateInDownLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s" data-wx-wow-offset="100"><image class="itemImg" src="{{item.FengmUrl}}"></image></view> 
+                         <view class="itemText {{wx.WOW()}} rotateInUpRight" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s" data-wx-wow-offset="100">
+                           <view class="bot"></view>
+                           <text class="text">{{util.sub(item.Title,22)}}</text>
+                           <text class="time">{{util.formatTime(item.Time,'/')}}</text>
+                           <view class="bottom"><span class="arrow"><i><em></em></i><i><em></em></i><i><em></em></i></span><image class="bottomImg" src="../../image/index/hopeTextRes.png" ></image></view>
+                        </view>
+                   </view>
+                </block>
+               </view>
+          </view>
+    </view>
+   <!-- 希望之门 -->
+   <view wx:if="{{!showFloor}}" class="gotoWelcome" id="showFloorID" catchtap="gotoWelcomePage"  bindtouchend="touchEnd2"  bindtouchstart="touchStart2">
+       <image class="icon" src="../../image/index/upIcon.png"></image><text class="text">往上滑动，打开“希望”之门</text>
+    </view>
+    <!-- 底部列表 -->
+    <view wx:if="{{showFloor}}" class="bottomList">
+      <block wx:for="{{bottomList}}" wx:key="index">
+          <navigator class="outBox {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1}}s" url="{{item.url}}"  open-type="{{item.type}}" hover-class="navigator-hover">
+           <image class="itemBgImg "  src="{{item.bgImg}}"></image> <view class="Box {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.2}}s" >  <view class="itemText {{wx.WOW()}} " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"   >{{item.name}}<i></i></view><image class="itemHopeText " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s" src="../../image/index/hopeBottomText.png" ></image></view>
+          </navigator>
+      </block>
+    </view>
+    <view id="bottomID" style="width: 750rpx; height: 180rpx"></view>
+    <tabBottom class="tabBottom {{showTab?'showTab': '' }}" activeIdx='1'></tabBottom>
+  </view>
+</view>
+

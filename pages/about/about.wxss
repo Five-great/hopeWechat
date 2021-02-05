@@ -1,0 +1,139 @@
+/* pages/about/about.wxss */
+@import '/template/bannerPage/bannerPage.wxss';
+@import '/template/bottomPage/bottomPage.wxss';
+
+.bannerPage .topBg{
+  display: block;
+  position: absolute;
+  top: -150rpx;
+  left: 0;
+  width: 750rpx;
+  height: 410rpx;
+  z-index: -1;
+}
+
+.article{
+  min-height: calc(100vh - 650rpx);
+}
+
+.QRcode{
+  display: block;
+  min-height: 500rpx;
+  width: 750rpx;
+  text-align: center;
+  height: 300rpx;
+}
+.QRcode .imgBox {
+  width: 201rpx;
+  height: 200rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.QRcode .lineBox{
+  display: inline-block;
+  width: 151rpx;
+  vertical-align: middle;
+}
+.QRcode .line{
+  display: inline-block;
+  width: 1rpx;
+  height: 333rpx;
+  margin: 0 auto ;
+ 
+}
+.QRcode .imgBox .imgCode{
+  width: 201rpx;
+  height: 200rpx;
+  margin-bottom: 15rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.QRcode text{
+  display: block;
+    font-size: 26rpx;
+    color: rgb(53, 53, 53);
+    line-height: 1.385;
+    text-align: center;
+}
+
+
+.mapBox{
+  margin: 50rpx auto ;
+  width: 700rpx;
+  height: 445rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.customCallout {
+  box-sizing: border-box;
+  background-color: #fff; 
+  border: 1rpx solid #ccc;
+  border-radius: 30px;
+  width: 150rpx;
+  height: 40rpx;
+  display: inline-flex;
+  padding: 5rpx 20rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 20rpx;
+  height: 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 50%;
+}
+
+.icon {
+  width: 40rpx;
+  height: 52rpx;
+}
+
+.content {
+  flex: 0 1 auto;
+  margin: 0 10rpx;
+  font-size: 14rpx;
+}
+
+.textBox{
+  min-height: 400rpx;
+  width: 750rpx ;
+}
+.textBox .textItem{
+  position: relative;
+  font-size: 0rpx;
+  display: block;
+  color: rgb(0, 0, 0);
+  height: 34rpx;
+  padding: 25rpx;
+  border-bottom: 2rpx solid  #c8c8c8;
+}
+.textBox .textItem .textTitle{
+  position: relative;
+  display:  inline-block;
+  letter-spacing: 2rpx;
+   width: 120rpx;
+   line-height: 85rpx;
+   height:84rpx;
+   vertical-align: middle;
+   color: rgb(0, 0, 0);
+   line-height: 1.28;
+   font-size: 28rpx;
+ 
+}
+.textBox .textItem .textTitle em{
+  display: inline-block;
+  width: 60rpx;
+  height: 34rpx;
+}
+
+.textBox .textItem  i{
+  font-size: 24rpx;
+  float: right;
+  display: block;
+  color: rgb(69, 69, 69);
+  line-height: 34rpx;
+}

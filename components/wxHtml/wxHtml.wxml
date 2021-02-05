@@ -1,0 +1,8 @@
+<!--components/wxHtml/wxHtml.wxml-->
+<view class="container">
+  <editor id="editor" class="ql-container" read-only  showImgSize showImgResize   bindready="onEditorReady" bindstatuschange="statuschange">
+      </editor>
+  <!-- <editor id="editor" class="ql-container"  bindstatuschange="onStatusChange" bindready="onEditorReady"> -->
+  <!-- </editor> -->
+</view>
+<slot></slot>

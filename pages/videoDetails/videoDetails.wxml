@@ -1,0 +1,57 @@
+<!--pages/videoXW/videoXW.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- 视频Box -->
+   <view class="videoShowBox">
+      <video id="videoID" 
+      src="{{videoUrl}}"
+      poster="{{videoCover}}"
+       >
+      </video>
+      <view>
+         <view class="prev text-page" >
+            <text class="topTitle" > dsf </text>
+            <text >上一篇</text>
+         </view>
+         <view class="next text-page" >
+            <text class="topTitle" > </text>
+            <text>下一篇</text>
+         </view>
+      </view>
+   </view>
+   <view class="lineBox"></view>
+	 <!-- 视频 -->
+	 <view class="videoBox "  bindtouchend="touchEnd"  bindtouchstart="touchStart" bindtouchmove="touchMove" animation="{{fv_pageScroll.animation}}">
+       <view class="videoTitle"><text>推荐视频</text></view>
+          <view  class="Box" >
+               <view class="main">
+                <block wx:for="{{xcspList}}" wx:key="index">
+                   <view class="itemBox {{wx.WOW()}} " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.1}}s" data-wx-wow-offset="100" data-wx-wow-name="fadeInUp"  data-wx-wow-outName="rotateOutDownRight" data-idx="{{item.id}}"  catchtap="{{wx.WOWOut}}"  >
+                        <view class="imgBox {{wx.WOW()}} rotateInDownLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"  data-wx-wow-name="rotateInDownLeft"   data-wx-wow-offset="100" ><image class="itemImg" src="{{item.photo}}" ></image></view> 
+                         <view class="itemText {{wx.WOW()}} rotateInUpRight" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"  data-wx-wow-name="rotateInUpRight" data-wx-wow-offset="100">
+                           <text class="text">{{util.sub(item.title,22)}}</text>
+                           <view class="itemButton">点击查看</view>
+                           <!-- <text class="time">{{util.formatTime(item.time,'/')}}</text> -->
+                           <!-- <view class="bottom"><span class="arrow"><i><em></em></i><i><em></em></i><i><em></em></i></span><image class="bottomImg" src="../../image/index/hopeTextRes.png" ></image></view> -->
+                        </view>
+                   </view>
+                </block>
+               </view>
+          </view>
+          <view id="upLoadID"> 
+            <view class="upLoad" wx:if="{{upLoadShow==1}}"> <image class="upLoadIcon" src="../../image/responsibility/uploadIcon.png"></image> <text>向上轻拉获取更多</text></view>
+            <view class="upLoad" wx:elif="{{upLoadShow==-1}}"><text class="all">已加载全部</text></view>
+            <view class="upLoad" wx:else> <image class="loadingIcon" src="../../image/responsibility/loadingIcon.png"></image> <text>正在努力获取中…</text></view>
+         </view>
+    </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航 -->
+<tabBottom></tabBottom>

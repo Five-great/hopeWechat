@@ -1,0 +1,234 @@
+/* pages/responsiblityDeiler/responsiblityDeiler.wxss */
+/* 引入模板wxss */
+@import '/template/bannerPage/bannerPage.wxss';
+@import '/template/bottomPage/bottomPage.wxss';
+.pages{
+  font-size:0;
+}
+/* 社会担当 */
+.sociology{
+  position: relative;
+  width: 750rpx;
+  height: auto;
+  min-height: 790rpx;
+}
+
+.sociology .Bg{
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top:0;
+  right: 0;
+  width:443rpx;
+  height:443rpx;
+}
+
+.sociology .Box{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  min-height:300rpx ;
+  z-index: 0;
+}
+
+.sociology .topTitle{
+  display: block;
+  width:  630rpx;
+  margin-top: -30rpx;
+  margin-left: 73rpx ;
+  height: 70rpx;
+   border-bottom: 2rpx dotted #c8c8c8;
+}
+.sociology .topTitle i{
+   display: block;
+   position: relative;
+   bottom: -60rpx;
+   left: -20rpx;
+   width: 18rpx;
+   height: 18rpx;
+   border: 2rpx solid #c8c8c8;
+   border-radius: 20rpx;
+}
+
+.sociology .topText{
+    font-size: 36rpx;
+    display: block;
+    position: relative;
+    width: 247rpx;
+    background: #fff;
+    margin-top: -15rpx;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    line-height: 1.2;
+}
+.sociology .topText i{
+  border: 15rpx solid transparent ;
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -8rpx;
+  right: -13rpx;
+  transform: rotate(-45deg) ;
+  border-left-color: #c31300;
+}
+
+.sociology .tophopeText{
+  display: block;
+  margin-top: 5rpx;
+  width: 310rpx;
+  height: 19rpx;
+}
+
+.sociology .main{
+
+}
+.sociology .main .itemBox{
+  width: 470rpx;
+  padding-left: 230rpx;
+  padding-top:30rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  position: relative;
+}
+.sociology .main .itemBox .imgBox{
+  height: 205rpx;
+  width: 330rpx;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.sociology .main .itemBox .itemImg{
+  height: 205rpx;
+  width: 330rpx;
+  display: block;
+  
+}
+.sociology .main .itemBox .itemText{
+  width: 285rpx;
+  padding:30rpx 65rpx 0 120rpx;
+  height: 190rpx;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  z-index: 0;
+  border-radius: 6rpx;
+  box-shadow: 0 0rpx 5rpx 0 rgba(0, 0, 0, 0.3);
+}
+
+.sociology .main .itemBox .text{
+    font-size: 22rpx;
+    text-align: justify;
+    display: block;
+    color: rgb(0, 0, 0);
+    line-height: 1.636;
+    min-height: 120rpx;
+}
+
+.sociology .main .itemBox .time{
+    display: block;
+    text-align: right ;
+    font-size: 16rpx;
+    color: rgb(200, 200, 200);
+    line-height: 1.2;
+}
+
+.sociology .main .itemBox .bottom{
+   display: block;
+   width: 390rpx;
+   padding-left: 80rpx;
+   height: 18rpx;
+   padding-top: 1rpx;
+   top: 20rpx;
+   left: -120rpx;
+   position: relative;
+   background: #f5f5f5;
+
+}
+.sociology .main .itemBox::after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 21rpx;
+  top: -48rpx;
+  width: 0;
+  height: 108rpx;
+  border-left: 2rpx dotted #c8c8c8 ;
+
+}
+.sociology .main .itemBox .bot{
+    position: absolute;
+    display: block;
+    top: 12rpx;
+    right: 12rpx;
+    width: 16rpx;
+    height: 16rpx;
+    border: 2rpx solid #c8c8c8;
+    border-radius: 20rpx;
+}
+.sociology .main .itemBox .bottom .bottomImg{
+  display: inline-block;
+  position: relative;
+  top: -10rpx;
+  width: 374rpx;
+  height: 17rpx;
+}
+.sociology .main .itemBox .bottom .arrow{
+  position: relative;
+  vertical-align: top;
+  top: 3rpx;
+  left: -48rpx;
+  display: inline-block;
+}
+.sociology .main .itemBox .bottom .arrow i{
+  position: relative;
+  z-index: 1;
+  width: 0rpx;
+  height: 0rpx;
+  margin-left: -4rpx;
+  display: inline-block;
+  border: 5rpx solid transparent;
+  border-width: 5rpx 6rpx 5rpx 6rpx;
+  border-left-color: #c31300;
+}
+.sociology .main .itemBox .bottom .arrow i em{
+  position: absolute;
+  top: -8rpx;
+  left: -8rpx;
+  display: block;
+  border: 5rpx solid transparent;
+  border-width: 8rpx 4rpx 8rpx 4rpx;
+  border-left-color: #f5f5f5;
+}
+
+.detailBox{
+  width: 700rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  display: block;
+}
+
+.detailBox .detailTitle{
+    font-size: 30rpx;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: justify;
+    letter-spacing: 1rpx;
+}
+
+
+.detailBox .detailTime {
+  font-size: 18rpx;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 3;
+  padding-bottom: 30rpx;
+}

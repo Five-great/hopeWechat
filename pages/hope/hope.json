@@ -1,0 +1,6 @@
+{
+  "usingComponents": { 
+    "tabBottom": "/components/tabBar/tabBar",
+    "wxHtml": "/components/wxHtml/wxHtml"
+  }
+}

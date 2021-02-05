@@ -1,0 +1,31 @@
+<!--pages/school/school.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '集团院校' , imgUrl: 'https://xcx.hope55.com/UploadFile/2021/1/26/0b1c91df-f2cc-49ca-aaa2-8537a44a5624.png'}}"/>
+   <!-- 顶部logo -->
+   <view class="logo"><image class="logoImg" src="https://xcx.hope55.com/UploadFile/2021/1/26/a86c023b-ec37-47fc-ad42-197eb417bae5.png"></image></view>
+   <!-- 集团院校 -->
+   <view class="schoolBox">
+    <view class="main">
+        <block wx:for="{{jtyxList}}" wx:key="index">
+            <view class="item">
+              <view class="imgBox"> <image class="fengmImg" src="{{item.FengmUrl}}"></image> </view>
+              <view class="cardBox"> <image class="logoImg" src="{{item.LogoUrl}}"></image> </view>
+              <view class="line"> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> </view>
+            </view>
+        </block>
+    </view>
+   </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom></tabBottom>

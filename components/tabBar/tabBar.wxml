@@ -1,0 +1,9 @@
+<!--components/tabBar/tabBar.wxml-->
+<view class='tabbar'>
+  <view  class='tabbar-item {{activeIdx === (index+1) ? "active" : ""}}' wx:for='{{tabbarList}}' wx:key='index' bindtap='handleItemTap' data-path='{{item.pagePath}}' data-idx='{{item.idx}}'>
+    <view class='tabbar-item-icon'>
+      <image class="iconBox {{wx.WOW()}}" src='{{activeIdx === (index+1) ? item.selectedIconPath : item.iconPath}}'></image>
+    </view>
+    <view class='tabbar-item-text'>{{item.text}}</view>
+  </view>
+</view>

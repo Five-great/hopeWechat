@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/history/history",
+    "pages/home/home",
+    "pages/responsibility/responsibility",
+    "pages/description/description",
+    "pages/videoXW/videoXW",
+    "pages/about/about",
+    "pages/logs/logs",
+    "pages/hopeEducation/hopeEducation",
+    "pages/culture/culture",
+    "pages/hope/hope",
+    "pages/responsiblityDetails/responsiblityDetails",
+    "pages/videoDetails/videoDetails",
+    
+    "pages/school/school",
+    "pages/hopeEducationContent/hopeEducationContent"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#C31300",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/responsibility/responsibility",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/description/description",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/videoXW/videoXW",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": ""
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

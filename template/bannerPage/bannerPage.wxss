@@ -1,0 +1,133 @@
+.bannerPage {
+  position: relative;
+  width: 750rpx;
+  height: 250rpx;
+  z-index: 3;
+  font-size: 0;
+}
+
+.bannerPage .topBg{
+  display: block;
+  position: absolute;
+  top: -10rpx;
+  left: 0;
+  width: 750rpx;
+  height: 250rpx;
+  z-index: -1;
+}
+.bannerPage .Box{
+  position: absolute;
+  z-index: 1;
+  width: 750rpx;
+  padding-top:45rpx;
+  height: 205rpx;
+  top: 0;
+  left: 0;
+}
+.bannerPage .round{
+	position: relative;
+	margin: auto;
+	height: 140rpx;
+	width: 140rpx;
+  line-height: 100rpx;
+	text-align: center;
+}
+
+.bannerPage .round .HOPE{
+  width: 56rpx;
+  height: 13rpx;
+   display: block;
+   position: absolute;
+   top: 65rpx;
+   left: -20rpx;
+}
+.bannerPage .round .EDUCATION{
+  width: 119rpx;
+  height: 14rpx;
+  position: absolute;
+   display: block;
+   top: 80rpx;
+   left: -20rpx;
+}
+
+.bannerPage .round .GROUP{
+  width: 58rpx;
+  height: 11rpx;
+  position: absolute;
+   display: block;
+   top: 95rpx;
+   left: -20rpx;
+}
+.bannerPage .round .text{
+   position: relative;
+   display: inline-block;
+    margin-top: 22rpx;
+    font-size: 30rpx;
+    color: rgb(195, 19, 0);
+    font-weight: bold;
+    letter-spacing: 5rpx;
+    line-height: 1.333;
+    left: -30rpx;
+}
+.bannerPage .roundBox{
+	position: absolute;
+  top: 45rpx;
+  left: 50%;
+  margin-left: -70rpx;
+	height: 140rpx;
+  width: 140rpx;
+  z-index: -1;
+}
+.bannerPage .roundBox::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+      border: 4rpx solid #c31300;
+      box-shadow: inset -2rpx -2rpx 5rpx 0rpx rgba(216,106,91,0.6);
+      /* transition: all .5s; */
+     
+      clip-path: polygon(0rpx 0rpx, 0rpx 25rpx, 115rpx 25rpx, 115rpx 115rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+}
+
+.bannerPage .roundBox.animated{
+  animation: clippath 2.5s linear;
+}
+@keyframes clippath {
+	0%{
+    clip-path: polygon(115rpx 115rpx, 115rpx 115rpx, 115rpx 25rpx, 115rpx 25rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 0rpx 140rpx, 0rpx 130rpx);
+    box-shadow: inset -2rpx -2rpx 5rpx 0rpx rgba(216,106,91,0.1);
+  }
+  2%{
+    clip-path: polygon(115rpx 115rpx, 115rpx 115rpx, 115rpx 25rpx, 115rpx 25rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 10rpx 140rpx, 10rpx 130rpx);
+  }
+	35% {
+    clip-path: polygon(115rpx 115rpx, 115rpx 115rpx, 115rpx 25rpx, 115rpx 25rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 130rpx 140rpx, 130rpx 130rpx);
+  }
+  36% {
+    clip-path: polygon(115rpx 115rpx, 115rpx 115rpx, 115rpx 115rpx, 115rpx 115rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 140rpx);
+  }
+	65% {
+    clip-path: polygon(140rpx 5rpx, 140rpx 5rpx, 140rpx 5rpx, 130rpx 5rpx, 130rpx 130rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+  }
+  66%{
+    clip-path: polygon(130rpx 0rpx, 130rpx 0rpx, 130rpx 0rpx, 130rpx 0rpx, 130rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+  }
+	85% {
+    clip-path: polygon(10rpx 0rpx, 10rpx 0rpx, 10rpx 0rpx, 10rpx 0rpx, 10rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+  }
+  86% {
+    box-shadow: inset -2rpx -2rpx 5rpx 0rpx rgba(216,106,91,0.3);
+    clip-path: polygon(0rpx 0rpx, 0rpx 10rpx, 10rpx 10rpx, 10rpx 0rpx, 10rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+  }
+  95%{
+    box-shadow: inset -2rpx -2rpx 5rpx 0rpx rgba(216,106,91,0.6);
+    clip-path: polygon(0rpx 0rpx, 0rpx 25rpx, 115rpx 25rpx, 115rpx 115rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+  }
+  100% {
+    box-shadow: inset -2rpx -2rpx 5rpx 0rpx rgba(216,106,91,0.8);
+    clip-path: polygon(0rpx 0rpx, 0rpx 25rpx, 115rpx 25rpx, 115rpx 115rpx, 115rpx 115rpx, 0rpx 115rpx, 0rpx 140rpx, 140rpx 140rpx, 140rpx 0rpx);
+	}
+}

@@ -1,0 +1,94 @@
+/* pages/school/school.wxss */
+/* 引入模板wxss */
+@import '/template/bannerPage/bannerPage.wxss';
+@import '/template/bottomPage/bottomPage.wxss';
+.pages{
+  font-size:0;
+}
+
+.bannerPage {
+  height: 410rpx;
+  margin-top: -150rpx;
+}
+.bannerPage .topBg{
+  height: 410rpx;
+}
+
+.bannerPage .round{
+
+  top: 145rpx;
+  
+}
+.bannerPage .roundBox{
+  top:189rpx;
+}
+
+.logoImg{
+  width: 346rpx ;
+  height: 62rpx;
+  display: block;
+  margin: 0 auto;
+}
+.schoolBox{
+ padding-top: 50rpx ;
+ min-height: 550rpx;
+}
+.schoolBox .main{
+
+}
+.schoolBox .main .item{
+  width: 750rpx;
+  height: 240rpx;
+  position: relative;
+}
+.schoolBox .main .item .imgBox{
+  width: 310rpx;
+  height: 175rpx;
+  position: absolute;
+  display: block;
+  border-radius: 0  90rpx  90rpx 0;
+  overflow: hidden;
+  top: 0rpx;
+  left: 0rpx;
+}
+.schoolBox .main .item .imgBox .fengmImg {
+  width: 310rpx;
+  height: 175rpx;
+  border-radius: 0  90rpx  90rpx 0;
+}
+
+.schoolBox .main .item .cardBox{
+  width: 455rpx;
+  padding-left:245rpx;
+  height: 140rpx;
+  margin-top: 18rpx;
+  margin-left: 50rpx ;
+  display: inline-block;
+  border-radius: 90rpx  0 0 90rpx;
+  vertical-align: middle;
+  box-shadow: 0rpx 0rpx 5rpx 0rpx rgba(0, 0, 0, 0.3);
+
+}
+
+.schoolBox .main .item .cardBox .logoImg{
+  width: 355rpx;
+  display: block;
+  height: auto;
+  float: right;
+  margin-top: 38rpx;
+  margin-right:50rpx;
+   height: 65rpx;
+}
+
+.schoolBox .main .item  .line{
+    font-size: 12rpx;
+    display: block;
+    width: 580rpx;
+    letter-spacing: -2rpx;
+    margin-top: 40rpx;
+    height: 30rpx;
+    color: #333 ;
+    float: right;
+}
+
+

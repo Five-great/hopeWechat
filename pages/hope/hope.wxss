@@ -1,0 +1,82 @@
+/* pages/hope/hope.wxss */
+/* 引入模板wxss */
+@import '/template/bannerPage/bannerPage.wxss';
+@import '/template/bottomPage/bottomPage.wxss';
+.pages{
+  font-size:0;
+}
+
+.bannerPage {
+  height: 410rpx;
+}
+.bannerPage .topBg{
+  height: 410rpx;
+}
+
+.bannerPage .round{
+  top: 145rpx;
+  
+}
+.bannerPage .roundBox{
+  top:189rpx;
+}
+
+.logoImg{
+  width: 346rpx ;
+  height: 62rpx;
+  display: block;
+  margin: 18rpx auto;
+  margin-top: 40rpx;
+}
+
+.wxHtmlBox{
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.descBox{
+  position: relative;
+  min-height: calc(100vh - 850rpx);
+}
+.desc{
+  text-align: justify;
+  padding-top: 30rpx;
+  font-size: 30rpx ;
+  line-height: 1.8;
+  width: 710rpx;
+  margin: 0 auto;
+  color: #333;
+}
+.imgNav1{
+  position: absolute;
+  left: 0rpx;
+  top: -20rpx;
+  z-index: 1;
+  overflow: hidden;
+  width: 206rpx;
+  height: 703rpx;
+}
+.imgNav2{
+  float: right;
+  margin-right: -20rpx;
+  margin-top: -30rpx;
+  z-index: 1;
+  overflow: hidden;
+  width: 193rpx;
+  height: 698rpx;
+}
+
+.imgNav1Box{
+  width: 226rpx;
+  height: 633rpx;
+  background: #000;
+  display: block;
+  float: left;
+}
+ .imgNav11{
+  width: 300rpx;
+  height: 50rpx;
+  display: block;
+  float: left;
+  background: #888;
+}

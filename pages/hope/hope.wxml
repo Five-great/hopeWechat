@@ -1,0 +1,42 @@
+<!--pages/hope/hope.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '集团简介' , imgUrl: 'https://xcx.hope55.com/UploadFile/2021/1/26/0b1c91df-f2cc-49ca-aaa2-8537a44a5624.png'}}"/>
+   <!-- 顶部logo -->
+   <view class="logo"><image class="logoImg" src="https://xcx.hope55.com/UploadFile/2021/1/26/a86c023b-ec37-47fc-ad42-197eb417bae5.png"></image></view>
+   <!-- 集团院校 -->
+   <view class="descBox">
+
+     <view class="desc" >
+       <!-- {{Desc}} -->
+       <image class="imgNav1" src="https://xcx.hope55.com/UploadFile/2021/2/3/7e0b2e73-a0ed-4ea8-b089-5623e5f678eb.png" ></image>
+       <view class="imgNav1Box">
+        <block wx:for="{{[1,2,3,4,5,6,7]}}" wx:key="index">
+          <i class="imgNav1{{item}}"></i>
+        </block>
+       </view>
+       <block wx:for="{{DescList}}" wx:key="index">
+        <!-- image -->
+          <view class="imgNav1Box{{index+1}}"></view>
+          <image wx:if="{{item.insert.image}}"  src="{{item.insert.image}}"></image>
+          <text wx:else  style="{{item.attributes}}" style="{{util.setStyle(item.attributes)}}">{{item.insert}}</text>
+       </block>
+       <image class="imgNav2" src="https://xcx.hope55.com/UploadFile/2021/2/3/1ff70c2c-c0f1-4edc-9f7c-271ce8ea26ee.png" ></image>
+     </view>
+     <view class="wxHtmlBox">
+        <wxHtml inner-text="{{Desc}}" bind:editorEvent="getEditorHtml"></wxHtml>
+     </view>
+   </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom></tabBottom>

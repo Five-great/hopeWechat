@@ -1,0 +1,53 @@
+/* components/tabBar/tabBar.wxss */
+ .tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 118rpx;
+  width: 100vw;
+  border-top: 0.5px solid #d5d5d5;
+  display: flex;
+  font-size: 0;
+  background: #fff;
+  border-radius: 30rpx 30rpx 0 0;
+  z-index: 99;
+  box-shadow: 0 -5rpx 8rpx 0 rgba(0, 0, 0, 0.2);
+}
+.tabbar-item {
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20rpx 10rpx 0;
+  color: #333333;
+}
+.tabbar-item .iconBox{
+  width: 42rpx;
+  height: 42rpx;
+}
+.tabbar-item-icon {
+  margin-bottom: 6rpx;
+  height: 56rpx;
+}
+.tabbar-item:first-child {
+
+}
+.tabbar-item:first-child .tabbar-item-text{
+  display: none;
+}
+.tabbar-item:first-child .iconBox{
+  width: 83rpx;
+  height: 83rpx;
+}
+.tabbar-item:nth-child(2) .iconBox{
+  margin-left: 12rpx;
+}
+
+.tabbar-item-text {
+  font-size: 18rpx;
+  line-height: 18rpx;
+}
+.tabbar-item.active {
+  color: #C31300;
+}

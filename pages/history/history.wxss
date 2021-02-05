@@ -1,0 +1,87 @@
+/* pages/history/history.wxss */
+@import '/template/bannerPage/bannerPage.wxss';
+@import '/template/bottomPage/bottomPage.wxss';
+.pages{
+  font-size:0;
+}
+.Box{
+  position: relative;
+  width: 750rpx;
+  min-height: 3900rpx;
+}
+
+.Box .img1{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 334rpx;
+  height: 769rpx;
+}
+
+.Box .img2{
+  width: 217rpx;
+  height: 976rpx;
+  position: absolute;
+  left: 0;
+  top: 600rpx;
+}
+
+.Box .img3{
+  position: absolute;
+   right: 0;
+   top:2200rpx;
+  width: 206rpx;
+  height: 958rpx;
+}
+
+.Box .img4{
+  position: absolute;
+  left: 0;
+   top: 2730rpx;
+  width: 237rpx;
+  height: 874rpx;
+}
+
+.yearItem{
+  width:230rpx;
+  text-align: center;
+  position: relative;
+}
+.yearItem .imgIcon{
+   width: 203rpx;
+   height: 13rpx;
+}
+.yearItem .title{
+   width: 230rpx;
+   height: 100rpx;
+    overflow: hidden;
+    font-size: 90rpx;
+    font-family: "HelveticaNeueCE";
+    color: rgb(195, 19, 0);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.yearItem .text{
+  text-align: center;
+  font-size: 24rpx;
+  font-family: "Microsoft YaHei";
+  color: rgb(29, 29, 29);
+  line-height: 1.2;
+}
+.yearItem .text i{
+   display: inline-block;
+   width: 50rpx;
+   height: 2rpx;
+   background: #000;
+   margin: 0 4rpx ;
+  vertical-align: middle;
+}
+
+.yearItem.year-0{
+   margin-left: 70rpx;
+}
+
+
+
+

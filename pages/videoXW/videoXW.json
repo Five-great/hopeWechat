@@ -1,0 +1,5 @@
+{
+  "usingComponents": { 
+    "tabBottom": "/components/tabBar/tabBar"
+  }
+}

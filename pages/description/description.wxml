@@ -1,0 +1,34 @@
+<!--pages/description/description.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '社会责任' , imgUrl: '../../image/responsibility/responsibilityTopBg.png'}}"/>
+	 <!-- 社会担当 -->
+	 <view class="descriptionBox"  bindtouchend="touchEnd"  bindtouchstart="touchStart" bindtouchmove="touchMove" animation="{{fv_pageScroll.animation}}">
+          <view  class="Box" >
+               <view class="main">
+                <block wx:for="{{whhcList}}" wx:key="index">
+                   <view class="itemBox {{wx.WOW()}} " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.1}}s" data-wx-wow-offset="100" data-wx-wow-name="fadeInUp"  data-wx-wow-outName="rotateOutDownRight" data-idx="{{item.id}}" data-src="{{item.photo}}"  catchtap="preview"  >
+                        <view class="imgBox {{wx.WOW()}} rotateInDownLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"  data-wx-wow-name="rotateInDownLeft"   data-wx-wow-offset="100" ><image class="itemImg" src="{{item.photo}}" ></image></view> 
+                   </view>
+                </block>
+               </view>
+          </view>
+          <view id="upLoadID"> 
+            <view class="upLoad" wx:if="{{upLoadShow==1}}"> <image class="upLoadIcon" src="../../image/responsibility/uploadIcon.png"></image> <text>向上轻拉获取更多</text></view>
+            <view class="upLoad" wx:elif="{{upLoadShow==-1}}"><text class="all">已加载全部</text></view>
+            <view class="upLoad" wx:else> <image class="loadingIcon" src="../../image/responsibility/loadingIcon.png"></image> <text>正在努力获取中…</text></view>
+         </view>
+    </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom activeIdx='3'></tabBottom>

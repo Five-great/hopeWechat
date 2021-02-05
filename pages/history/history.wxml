@@ -1,0 +1,33 @@
+<!--pages/history/history.wxml-->
+<!-- 引入模板 -->
+<import src="/template/bannerPage/bannerPage.wxml"/>
+<import src="/template/bottomPage/bottomPage.wxml"/>
+<!-- 引入公共wxs -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<!-- 引入动效库 -->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+<view class="pages {{wx.WOW()}} bounceInU" data-wx-wow-id="{{wx.WOWId()}}" >
+   <!-- bannerPage -->
+   <template is="bannerPage" data="{{Ttile: '发展历程' , imgUrl: 'https://xcx.hope55.com/UploadFile/2021/2/5/4a5fbafa-ed9f-4367-af56-c062c7b6384c.png'}}"/>
+   <view class="Box">
+           <image class="img1" src="https://xcx.hope55.com/UploadFile/2021/2/5/9bc03208-eac4-43f1-bee5-66bb4975ecb7.png"></image>
+           <image class="img2" src="https://xcx.hope55.com/UploadFile/2021/2/5/9823828902223ssssa83883102983137272712dddddd.png"></image>
+           <image class="img3" src="https://xcx.hope55.com/UploadFile/2021/2/5/722f7a49-b9d9-4340-8d71-7ab28da28c41.png"></image>
+           <image class="img4" src="https://xcx.hope55.com/UploadFile/2021/2/5/0bbbcd53-a8fa-450b-8ae0-3387323aa7d7.png"></image>
+           <block wx:for="{{fzlcList}}" wx:key="index">
+                <view class="yearItem year-{{index}} " >
+                   <view class="line"></view>
+                   <view class="title">{{item.title}}</view>
+                   <image class="imgIcon" src="https://xcx.hope55.com/UploadFile/2021/2/5/a35bb8de-01ea-47ad-92d1-d1045dbca566.png"></image>
+                   <view class="text" ><i></i> <text>精彩回顾</text><i></i></view>
+                </view>
+           </block>
+           
+   </view>
+    <!-- bottom -->
+    <template is="bottomPage" />
+</view>
+<!-- 导航组件 -->
+<tabBottom></tabBottom>
+

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+<view change:prop="{{wx.WOWChange}}" prop="{{wxwow}}" ></view>
+  <view class="mainBox {{wx.WOW()}}  fadeIn" data-wx-wow-id="{{wx.WOWId()}}" >
+    <image class="hopeBg" src="../../image/index/hopeBg.png"></image>
+    <image class="hopeLogo  {{wx.WOW()}} bounceInUp" data-wx-wow-id="{{wx.WOWId()}}" src="../../image/index/hopeLogo.png"></image>
+    <image class="hopeTitleZN   {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.2s" src="../../image/index/hopetitleZN.png"></image>
+    <image class="hopeTitleEN   {{wx.WOW()}} bounceInRight" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.3s" src="../../image/index/hopetitleEN.png"></image>
+    <view class="roundBox"><image class="round  {{wx.WOW()}} fadeInBottomLeft downEffect" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.3s" src="../../image/index/round.png" ></image></view>
+    <image class="btn {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.6s" src="../../image/index/btn.png" ></image>
+    <view class="botBox {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.6s" >
+      <view class="btn-bot bot1 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.6s"></view>
+      <view class="btn-bot bot2 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.7s"></view>
+      <view class="btn-bot bot3 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.8s"></view>
+      <view class="btn-bot bot4 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.9s"></view>
+      <view class="btn-bot bot5 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="2s"></view>
+      <view class="btn-bot bot6 {{wx.WOW()}} downEffects" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="2.1s"></view>
+    </view>
+    
+    <view class="tags">
+      <view class="{{wx.WOW()}} fadeInUp tag" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.8s" data-wx-wow-offset="0" >感<i></i>恩</view>
+      <view class="{{wx.WOW()}} fadeInUp tag" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1s" data-wx-wow-offset="0" >阳<i></i>光</view>
+      <view class="{{wx.WOW()}} fadeInUp tag black" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.2s" data-wx-wow-offset="0" >严<i></i>谨</view>
+      <view class="{{wx.WOW()}} fadeInUp tag black" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="1.4s" data-wx-wow-offset="0" >责<i></i>任</view>
+    </view>
+  </view>

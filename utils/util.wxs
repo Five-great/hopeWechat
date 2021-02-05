@@ -1,0 +1,35 @@
+var sub = function(val,end) { return val.length>end?val.substring(0, end)+'...' : val}
+var formatTime = function(_date,v){return _date.substring(0, 10).replace(getRegExp('-','g'),v) }
+var setStyle = function(_data){if(typeof _data == 'object'){return toLine(JSON.stringify(_data).replace('{','').replace('}','').replace(getRegExp('"','g'),'').replace(getRegExp(',','g'),';'));} }
+function toLine(name) {return name.replace(getRegExp('([A-Z])','g'),"-$1").toLowerCase();} 
+var oper = function (_data,v){return _data & v}
+//function objectKeys(obj) {
+ // var str = JSON.stringify(obj);
+  // var reg = getRegExp('"(\w+)":|[{}]', "g");
+  // var keys = [];
+  //var styleStr = ' '
+  //str = str.replace('{','').replace('}','').replace(getRegExp('"','g'),'').replace(getRegExp(',','g'),';');
+  // var nested = 0;
+  // var result = null;
+  // while((result = reg.exec(str)) !== null) {
+  //   var match = result[0]
+  //   switch(match) {
+  //     case "{":
+  //       nested++;
+  //       break;
+  //     case "}":
+  //       nested--;
+  //       break;
+  //     default:
+  //       if (nested === 1){ keys.push(result[1]);}
+  //       break;
+  //   }
+  // }
+  //return toLine(str);
+//}
+module.exports = {
+  sub: sub,
+  oper: oper,
+  formatTime: formatTime,
+  setStyle: setStyle
+}

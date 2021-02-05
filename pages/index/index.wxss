@@ -1,0 +1,135 @@
+/**index.wxss**/
+.mainBox{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.mainBox .hopeBg{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+.mainBox .hopeLogo{
+  width: 101rpx;
+  height: 101rpx;
+  position: relative;
+  display: block;
+  top: 195rpx;
+  left: 50%;
+  margin-left: -50rpx;
+  z-index: 2;
+}
+.mainBox  .hopeTitleZN{
+  width: 261rpx;
+  height: 39rpx;
+  position: relative;
+  display: block;
+  left: 50%;
+  margin-left: -130rpx;
+  top: 220rpx;
+  z-index: 3;
+}
+.mainBox  .hopeTitleEN{
+  width: 260rpx;
+  height: 14rpx;
+  position: relative;
+  display: block;
+  left: 50%;
+  margin-left: -130rpx;
+  top: 230rpx;
+  z-index: 3;
+}
+.mainBox .roundBox{
+  position: relative;
+  top:0;
+  left: 0rpx;
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 0;
+}
+.mainBox  .round{
+  position: absolute;
+  display: block;
+  left:50%;
+  top: 100%;
+  margin-left: -754rpx;
+  margin-top: -1362rpx;
+  width: 1509rpx;
+  height: 1509rpx;
+}
+.mainBox .tags{
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  justify-items: center;
+  bottom:40rpx;
+  height: 30rpx;
+  width: 100vw;
+}
+.mainBox .btn{
+  display: block;
+  position: absolute;
+  z-index: 6;
+  width: 79rpx;
+  height: 79rpx;
+  bottom: 440rpx;
+  left: 50%;
+  margin-left: -40rpx;
+}
+.mainBox .btn-bot{
+  display: block;
+  width: 4rpx;
+  height: 4rpx;
+  border-radius: 2rpx;
+  background: #fff;
+  margin: 10rpx auto;
+}
+.mainBox .btn-bot.bot2{
+  bottom: 410rpx;
+}
+.mainBox .btn-bot.bot3{
+  bottom: 395rpx;
+}
+.mainBox .botBox{
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 80rpx;
+  height:100rpx;
+  bottom: 325rpx;
+  left: 50%;
+  z-index: 6;
+  opacity: 1!important;
+  filter: opacity=100!important;
+  margin-left: -40rpx;
+}
+.mainBox .btn-bot.bot4{
+  bottom: 380rpx;
+}
+.mainBox .btn-bot.bot5{
+  bottom: 365rpx;
+}
+.mainBox .btn-bot.bot6{
+  bottom: 350rpx;
+}
+.mainBox .tags .tag{
+  display: inline-block;
+  flex: 1;
+  font-size: 24rpx;
+  font-family: "Microsoft YaHei";
+  line-height: 1.636;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.mainBox .tags .tag i{display: inline-block;width: 50rpx; height: 24rpx;}
+.mainBox .tags .tag.black{
+  color: rgb(0, 0, 0);
+}

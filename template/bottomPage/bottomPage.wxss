@@ -1,0 +1,5 @@
+/* bottom */
+.bottom .bottomRed{
+  width: 750rpx;
+  height: 306rpx;
+}

@@ -1,0 +1,15 @@
+<template name="bannerPage">
+<wxs src="../../utils/wow/wxWOW.wxs" module="wx" />
+	<view class="bannerPage">
+        <image class="topBg {{wx.WOW()}} fadeInDown" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-duration="0.6s" src="{{imgUrl}}"></image>
+        <view class="Box">
+           <view class="roundBox {{wx.WOW()}}" data-wx-wow-id="{{wx.WOWId()}}"></view>
+            <view class="round">
+                 <view class="text {{wx.WOW()}} backInDown" data-wx-wow-id="{{wx.WOWId()}}"  >{{Ttile}}</view>
+                 <image class="HOPE {{wx.WOW()}} flipInX " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.6s" src="../../image/responsibility/HOPE.png"></image>
+                 <image class="EDUCATION {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.6s" src="../../image/responsibility/EDUCATION.png"></image>
+                 <image class="GROUP {{wx.WOW()}} flipInY" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="0.6s" src="../../image/responsibility/GROUP.png"></image>
+            </view>
+         </view>
+	</view>
+</template>

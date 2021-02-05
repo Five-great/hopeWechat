@@ -1,0 +1,7 @@
+{
+  "usingComponents": { 
+    "tabBottom": "/components/tabBar/tabBar",
+    "wxHtml": "/components/wxHtml/wxHtml"
+  },
+  "navigationBarTitleText": "社会责任"
+}
