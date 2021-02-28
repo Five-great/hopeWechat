@@ -60,25 +60,7 @@
   margin-top: 30rpx;
   position: relative;
 }
-.videoBox .main .itemBox:first-child{
-  display: block;
-  width: 700rpx;
-  margin: 0 auto;
-  height: 470rpx;
-  padding: 0;
-  margin-top: 50rpx;
-}
-.videoBox .main .itemBox:first-child .imgBox{
-  display: block;
-  width: 700rpx;
-  margin: 0 auto;
-  height: 470rpx;
-}
-.videoBox .main .imgBox:first-child .itemImg{
-  width: 700rpx;
-  margin: 0 auto;
-  height: 470rpx;
-}
+
 .videoBox .main .itemBox .imgBox{
   height: 150rpx;
   width: 250rpx;
@@ -95,6 +77,25 @@
   width: 250rpx;
   display: block;
   
+}
+.videoBox .main .itemBox:first-child{
+  display: block;
+  width: 700rpx;
+  margin: 0 auto;
+  height: 470rpx;
+  padding: 0;
+  margin-top: 50rpx;
+}
+.videoBox .main .itemBox:first-child .imgBox{
+  display: block;
+  width: 700rpx;
+  margin: 0 auto;
+  height: 470rpx;
+}
+.videoBox .main .itemBox:first-child .itemImg{
+  width: 700rpx;
+  margin: 0 auto;
+  height: 470rpx;
 }
 .videoBox .main .itemBox:first-child .itemText{
   display: none;

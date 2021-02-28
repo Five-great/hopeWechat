@@ -46,7 +46,7 @@
     <!-- 菜单导航 -->
     <view class="menu">
       <block wx:for="{{menuList}}" wx:key="index">
-        <navigator class="outBox {{wx.WOW()}} fadeInBottomLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1}}s" url="{{item.url}}"  open-type="{{item.type}}" hover-class="navigator-hover">
+        <navigator class="outBox {{wx.WOW()}} fadeInBottomLeft " data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1}}s" url="{{item.url}}"  open-type="{{item.type}}" hover-class="navigator-hover">
           <view class="Box"><image class="itemBgImg "  src="{{item.bgImg}}"></image><image class="itemHopeText {{wx.WOW()}} bounceInLeft" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.2}}s" src="../../image/index/hopeText.png" ></image> <image class="itemIconImg {{wx.WOW()}} zoomIn" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s" src="{{item.iconImg}}"></image> <text class="itemText {{wx.WOW()}} fli" data-wx-wow-id="{{wx.WOWId()}}" data-wx-wow-delay="{{index*0.1+0.3}}s"   >{{item.name}}</text></view>
         </navigator>
        </block>

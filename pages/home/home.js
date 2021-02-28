@@ -35,6 +35,12 @@ Page({
         critical: 180,
         windowHeight:'',// 屏幕高度
       },
+      wxwowConfig: {
+        repeat: false, //是否重复触发
+      //   repeatMode: 'onShow',//触发方式( onShow, on)
+
+          
+      }
   },
 
   /**
@@ -42,7 +48,6 @@ Page({
    */
   onLoad: function (options) {
     wx.getSystemInfo({success: res=> { this.setData({ ['fv_pageScroll.windowHeight']: res.screenHeight})} })
-
     wx.Base.getBanner().then(res=>{
        res.state=='ok'?this.setData({BannerList: res.info }): ''
     });
@@ -56,7 +61,7 @@ Page({
     ((e.timeStamp-  this.data.fv_pageScroll.endTime)>500)?this.data.fv_pageScroll.startY = e.touches[0].pageY: '';  
   },
   touchStart2(e){
-    ((e.timeStamp-  this.data.fv_pageScroll.endTime2)>500)?this.data.fv_pageScroll.startY2 = e.touches[0].pageY: '';  
+    ((e.timeStamp -  this.data.fv_pageScroll.endTime2)>500)?this.data.fv_pageScroll.startY2 = e.touches[0].pageY: '';  
   },
   touchMove(e){
    

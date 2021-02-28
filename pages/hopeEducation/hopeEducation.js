@@ -55,8 +55,8 @@ Page({
   onReady: function () {
 
   },
-   wxWOWCatchTap: function(e){
-    //  console.log(e)
+   wxWOWTap: function(e){
+     console.log(e)
      setTimeout(()=>{
       e.target.dataset.idx?wx.navigateTo({url: '/pages/hopeEducationContent/hopeEducationContent?idx='+e.target.dataset.idx}):''
      },600)

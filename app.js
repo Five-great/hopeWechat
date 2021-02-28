@@ -1,5 +1,5 @@
 // app.js
-Page = require('./utils/wow/wxWOW')
+Page = require('./utils/wow/wxWOW.min.js')
 App({
   onLaunch() {
     // 展示本地存储能力

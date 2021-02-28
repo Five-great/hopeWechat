@@ -93,7 +93,7 @@ Component({
   ready() {},
   pageLifetimes: {
     show: function() {
-      console.log('show')
+      // console.log('show')
       this.setData({
         _auth: wx.getStorageSync('__com-tabbar-auth')
       })

@@ -66,14 +66,17 @@ function observe(obj, key, watchFun, deep, page,fullName) {
     }
   })
 }
-var ResetFunc = function(_this){
+var ResetFunc = function(_this,_state){
   let $fv_that = _this;
+  // console.log( $fv_that.data.$fv_wxWoW.oldlist)
   $fv_that.data.$fv_wxWoW.oldlist = [];
-  $fv_that.setData({wxwow: { state: 'RESET',prefix: $fv_that.data.wxwow.prefix} });
+  $fv_that.setData({wxwow: { state: _state ,prefix: $fv_that.data.wxwow.prefix} });
+
+
+ 
 }
 var ScrollFunc = function(_this){
   let $fv_that = _this;
-  // console.log(_this)
   let query = wx.createSelectorQuery();
   query.selectAll('.wx-wow').boundingClientRect('.wx-wow').exec(function(res){
       // console.log(fv_that.data.wxWoWList)
@@ -118,14 +121,12 @@ const $FV_WXWOW ={
   OnHideFunc: function(e){
     let $fv_that = this;
     // console.log( $fv_that.data.$fv_wxWoW.oldlist)
-    ResetFunc($fv_that);
-    console.log("hide")
+    $fv_that.data.wxwowConfig && !$fv_that.data.wxwowConfig.repeat? ResetFunc($fv_that,'RESET-REPEAT') : ResetFunc($fv_that,'RESET');
+  
   },
   OnShowFunc: function(e){
     let $fv_that = this;
-    // console.log('show12');
-    // console.log( $fv_that.data.$fv_wxWoW.oldlist);
-    setTimeout(()=>{ScrollFunc($fv_that)},200);
+    $fv_that.data.wxwowConfig && !$fv_that.data.wxwowConfig.repeat ? '': setTimeout(()=>{ScrollFunc($fv_that)},200);
   },
   OnPageScrollFunc: function(e){
     let $fv_that = this;

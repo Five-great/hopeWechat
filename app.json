@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/history/history",
+    
     "pages/home/home",
     "pages/responsibility/responsibility",
     "pages/description/description",
@@ -12,7 +12,7 @@
     "pages/hope/hope",
     "pages/responsiblityDetails/responsiblityDetails",
     "pages/videoDetails/videoDetails",
-    
+    "pages/history/history",
     "pages/school/school",
     "pages/hopeEducationContent/hopeEducationContent"
   ],

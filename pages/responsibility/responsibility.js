@@ -53,7 +53,7 @@ Page({
   onReady: function () {
 
   },
-   wxWOWCatchTap: function(e){
+   wxWOWTap: function(e){
     //  console.log(e)
      setTimeout(()=>{
       e.target.dataset.idx?wx.navigateTo({url: '/pages/responsiblityDetails/responsiblityDetails?idx='+e.target.dataset.idx}):''
